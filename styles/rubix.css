@@ -1,0 +1,47 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f8fc; /* off-white */
+    color: #0a1f44;      /* dark blue text */
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column; /* stack header above content */
+    align-items: stretch;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+/* Main container feel (future-proof) */
+/* Header */
+.page-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(10, 31, 68, 0.06);
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+}
+
+/* PDF iframe fills remaining space */
+.content-frame {
+    flex: 1 1 auto;
+    width: 100%;
+    border: none;
+    min-height: 0; /* allow flex children to shrink properly */
+    display: block;
+}
